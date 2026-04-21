@@ -72,16 +72,20 @@ fi
 
 dnf5 install -y \
     libnvidia-fbc \
-    libnvidia-ml.i686 \
     libva-nvidia-driver \
     nvidia-driver \
     nvidia-driver-cuda \
-    nvidia-driver-cuda-libs.i686 \
-    nvidia-driver-libs.i686 \
     nvidia-settings \
     nvidia-container-toolkit \
     ${VARIANT_PKGS} \
     "${AKMODNV_PATH}"/kmods/kmod-nvidia-"${KERNEL_VERSION}"-"${NVIDIA_AKMOD_VERSION}"."${DIST_ARCH}".rpm
+
+if [ "$FRELEASE" -lt 44 ]; then
+    dnf5 install -y \
+        libnvidia-ml.i686 \
+        nvidia-driver-cuda-libs.i686 \
+        nvidia-driver-libs.i686
+fi
 
 # Ensure the version of the Nvidia module matches the driver
 KMOD_VERSION="$(rpm -q --queryformat '%{VERSION}' kmod-nvidia)"
