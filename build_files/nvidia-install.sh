@@ -25,7 +25,7 @@ dnf5 config-manager setopt fedora-cisco-openh264.enabled=0
 dnf5 install -y "${AKMODNV_PATH}"/ublue-os/ublue-os-nvidia-addons-*.rpm
 
 # F44 has no i686 mirrors? - https://mirrormanager.fedoraproject.org/
-if [ "$FRELEASE" -lt 44 ]; do
+if [ "$FRELEASE" -lt 44 ]; then
     MULTILIB=(
         mesa-dri-drivers.i686
         mesa-filesystem.i686
