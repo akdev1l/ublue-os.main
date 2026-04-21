@@ -8,6 +8,7 @@ on:
 permissions:
   packages: write
   id-token: write
+  contents: read
   
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
