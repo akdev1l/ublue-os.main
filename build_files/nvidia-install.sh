@@ -24,19 +24,20 @@ dnf5 config-manager setopt fedora-cisco-openh264.enabled=0
 ## nvidia install steps
 dnf5 install -y "${AKMODNV_PATH}"/ublue-os/ublue-os-nvidia-addons-*.rpm
 
-# F44 has no i686 mirrors? - https://mirrormanager.fedoraproject.org/
+MULTILIB=(
+    mesa-dri-drivers.i686
+    mesa-filesystem.i686
+    mesa-libEGL.i686
+    mesa-libGL.i686
+    mesa-libgbm.i686
+    mesa-vulkan-drivers.i686
+)
+
+dnf5 install -y "${MULTILIB[@]}"
+
+# F44 does not need this: https://src.fedoraproject.org/rpms/mesa/c/f747343d109d2b691d3abcf4649cd10ad42d6578?branch=f44
 if [ "$FRELEASE" -lt 44 ]; then
-    MULTILIB=(
-        mesa-dri-drivers.i686
-        mesa-filesystem.i686
-        mesa-libEGL.i686
-        mesa-libGL.i686
-        mesa-libgbm.i686
-        mesa-va-drivers.i686
-        mesa-vulkan-drivers.i686
-    )
-    
-    dnf5 install -y "${MULTILIB[@]}"
+    dnf5 install -y mesa-va-drivers.i686
 fi
 
 # enable repos provided by ublue-os-nvidia-addons (not enabling fedora-nvidia-lts)
@@ -72,20 +73,16 @@ fi
 
 dnf5 install -y \
     libnvidia-fbc \
+    libnvidia-ml.i686 \
     libva-nvidia-driver \
     nvidia-driver \
     nvidia-driver-cuda \
+    nvidia-driver-cuda-libs.i686 \
+    nvidia-driver-libs.i686 \
     nvidia-settings \
     nvidia-container-toolkit \
     ${VARIANT_PKGS} \
     "${AKMODNV_PATH}"/kmods/kmod-nvidia-"${KERNEL_VERSION}"-"${NVIDIA_AKMOD_VERSION}"."${DIST_ARCH}".rpm
-
-if [ "$FRELEASE" -lt 44 ]; then
-    dnf5 install -y \
-        libnvidia-ml.i686 \
-        nvidia-driver-cuda-libs.i686 \
-        nvidia-driver-libs.i686
-fi
 
 # Ensure the version of the Nvidia module matches the driver
 KMOD_VERSION="$(rpm -q --queryformat '%{VERSION}' kmod-nvidia)"
