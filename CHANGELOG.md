@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.0.0 (2026-04-22)
+
+
+### Features
+
+* add fcitx5-chewing and fcitx5-m17n to Kinoite based images ([#2057](https://github.com/akdev1l/ublue-os.main/issues/2057)) ([9c70151](https://github.com/akdev1l/ublue-os.main/commit/9c70151560783d73e681608451e889916cf7aba3))
+
+
+### Bug Fixes
+
+* add copr standard naming convention for ublue-os/staging ([#2046](https://github.com/akdev1l/ublue-os.main/issues/2046)) ([27c67a9](https://github.com/akdev1l/ublue-os.main/commit/27c67a97aa1bd3a69f23da22ca966ffc2e9cedc3))
+* Add COSIGN_PASSWORD to reusable-build workflow ([7a5423c](https://github.com/akdev1l/ublue-os.main/commit/7a5423c5ae6ad2274c76a16e078356bedd4d8352))
+* add necessary permissions for build to publish packages ([2e0ffe8](https://github.com/akdev1l/ublue-os.main/commit/2e0ffe87501c91aac5938cd908fc1f45b693f75f))
+* add read permissions to content ([65d4922](https://github.com/akdev1l/ublue-os.main/commit/65d4922de63a4ef5e3f3abf458365f3c68cd6632))
+* Correct missed mention of old email ([#2077](https://github.com/akdev1l/ublue-os.main/issues/2077)) ([86caf6a](https://github.com/akdev1l/ublue-os.main/commit/86caf6a48991843b9b697b169bef1438013b104c))
+* Name the repo we're actually using for Nvidia drivers in 2026 ([#2078](https://github.com/akdev1l/ublue-os.main/issues/2078)) ([a62c988](https://github.com/akdev1l/ublue-os.main/commit/a62c9881869ade5820710f3bd077528aad2442aa))
+* only remove deprecated package ([00770e0](https://github.com/akdev1l/ublue-os.main/commit/00770e0b6103cc4a3517194069ba871dc6489911))
+* pin rpm-ostree to 2025.12-1 ([#2171](https://github.com/akdev1l/ublue-os.main/issues/2171)) ([72abdb5](https://github.com/akdev1l/ublue-os.main/commit/72abdb5157d90b84c3c2c157e37e6defdb90a5ea))
+* reintroduce the i686 stuff for &lt; F44 ([0a87e2a](https://github.com/akdev1l/ublue-os.main/commit/0a87e2a023eeac0ca0a92dfb88a8d985c2afa154))
+* remove 32 bit libraries from &gt; f44 ([4bc80ae](https://github.com/akdev1l/ublue-os.main/commit/4bc80ae1d3e2aee86a21c57efdebc020536ec0b0))
+* syntax error in nvidia-install.sh ([3fdd3e0](https://github.com/akdev1l/ublue-os.main/commit/3fdd3e047fab4ceb9a2367161f1f50c7b7b94d61))
+* Use new shared email in code of conduct document for reporting ([#2070](https://github.com/akdev1l/ublue-os.main/issues/2070)) ([ac8c870](https://github.com/akdev1l/ublue-os.main/commit/ac8c870a3fd99309869771da63af48c477cd7dc5))
+
 ## [2.3.0](https://github.com/ublue-os/main/compare/v2.2.0...v2.3.0) (2025-04-16)
 
 
