@@ -62,10 +62,6 @@ variants := '(
 # Sudo/Podman/Just
 
 [private]
-SUDO_DISPLAY := env("DISPLAY", "") || env("WAYLAND_DISPLAY", "")
-[private]
-SUDOIF := if `id -u` == "0" { "" } else if SUDO_DISPLAY != "" { which("sudo") + " --askpass" } else { which("sudo") }
-[private]
 just := just_executable()
 [private]
 PODMAN := which("podman") || require("podman-remote")
@@ -484,8 +480,8 @@ gen-sbom $image_name $fedora_version $variant:
         pull-retry "docker.io/anchore/syft:latest"
         SYFT_ID="$({{ PODMAN }} create docker.io/anchore/syft:latest)"
         {{ PODMAN }} cp "$SYFT_ID":/syft /tmp/syft.install
-        {{ SUDOIF }} cp /tmp/syft.install /usr/local/bin/syft
-        {{ SUDOIF }} rm -f /tmp/syft.install
+        cp /tmp/syft.install /usr/local/bin/syft
+        rm -f /tmp/syft.install
         {{ PODMAN }} rm -f "$SYFT_ID" > /dev/null
         {{ PODMAN }} rmi "docker.io/anchore/syft:latest"
     fi
