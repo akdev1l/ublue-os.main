@@ -64,7 +64,7 @@ variants := '(
 [private]
 just := just_executable()
 [private]
-PODMAN := which("podman") || require("podman-remote")
+PODMAN := which("podman")
 
 # Make things quieter by default
 
