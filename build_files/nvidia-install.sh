@@ -75,12 +75,9 @@ fi
 
 dnf5 install -y \
     libnvidia-fbc \
-    libnvidia-ml.i686 \
     libva-nvidia-driver \
     nvidia-driver \
     nvidia-driver-cuda \
-    nvidia-driver-cuda-libs.i686 \
-    nvidia-driver-libs.i686 \
     nvidia-settings \
     nvidia-container-toolkit \
     ${VARIANT_PKGS} \
