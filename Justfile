@@ -64,12 +64,12 @@ variants := '(
 [private]
 just := just_executable()
 [private]
-PODMAN := which("podman")
+PODMAN := "podman"
 
 # Make things quieter by default
 
 [private]
-export SET_X := if `id -u` == "0" { "1" } else { env('SET_X', '') }
+export SET_X := "1"
 
 # Aliases
 
