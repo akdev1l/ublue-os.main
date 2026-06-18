@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.0](https://github.com/akdev1l/ublue-os.main/compare/v1.0.0...v1.1.0) (2026-06-18)
+
+
+### Features
+
+* add fcitx5-chewing and fcitx5-m17n to Kinoite based images ([#2057](https://github.com/akdev1l/ublue-os.main/issues/2057)) ([9c70151](https://github.com/akdev1l/ublue-os.main/commit/9c70151560783d73e681608451e889916cf7aba3))
+
+
+### Bug Fixes
+
+* add copr standard naming convention for ublue-os/staging ([#2046](https://github.com/akdev1l/ublue-os.main/issues/2046)) ([27c67a9](https://github.com/akdev1l/ublue-os.main/commit/27c67a97aa1bd3a69f23da22ca966ffc2e9cedc3))
+* Correct missed mention of old email ([#2077](https://github.com/akdev1l/ublue-os.main/issues/2077)) ([86caf6a](https://github.com/akdev1l/ublue-os.main/commit/86caf6a48991843b9b697b169bef1438013b104c))
+* Name the repo we're actually using for Nvidia drivers in 2026 ([#2078](https://github.com/akdev1l/ublue-os.main/issues/2078)) ([a62c988](https://github.com/akdev1l/ublue-os.main/commit/a62c9881869ade5820710f3bd077528aad2442aa))
+* pin rpm-ostree to 2025.12-1 ([#2171](https://github.com/akdev1l/ublue-os.main/issues/2171)) ([72abdb5](https://github.com/akdev1l/ublue-os.main/commit/72abdb5157d90b84c3c2c157e37e6defdb90a5ea))
+* pin setup-just version? ([633586b](https://github.com/akdev1l/ublue-os.main/commit/633586b0b375ec1dbc04cf93eb92b6c2be9e372a))
+* remove i686 packages from nvidia-install.sh ([b9e3dbd](https://github.com/akdev1l/ublue-os.main/commit/b9e3dbdfc649d6044fbab989270d2b8c6e36fecf))
+* Remove SUDOIF usage for syft installation ([e6473b4](https://github.com/akdev1l/ublue-os.main/commit/e6473b4b83145184a5abfa9572c72a75e242719c))
+* remove support for podman --remote command in Justfile ([51f94ea](https://github.com/akdev1l/ublue-os.main/commit/51f94eab2549c052ac200ed28aa4d5eac429bc70))
+* Update Justfile to simplify PODMAN and SET_X ([af17b0f](https://github.com/akdev1l/ublue-os.main/commit/af17b0f72788e811dadd07e28a1d6d932344229a))
+* Use new shared email in code of conduct document for reporting ([#2070](https://github.com/akdev1l/ublue-os.main/issues/2070)) ([ac8c870](https://github.com/akdev1l/ublue-os.main/commit/ac8c870a3fd99309869771da63af48c477cd7dc5))
+
 ## 1.0.0 (2026-05-11)
 
 
